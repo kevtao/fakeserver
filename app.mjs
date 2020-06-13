@@ -7,7 +7,7 @@ const server = app.listen(port);
 app.get("/api/location/search", (request, response) => {
   response.json([
     {
-      title: "Santa clara",
+      title: "kevin suck e",
       location_type: "City",
       woeid: 2488042,
       latt_long: "37.338581,-121.885567",
