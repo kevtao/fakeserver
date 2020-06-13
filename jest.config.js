@@ -1,5 +1,5 @@
-module.export = {
+module.exports = {
     transform: {
-        '^.+\\.m?js$': 'babel-jest'
+        '^.+\\.m?js$': 'babel-jest',
     }
 }

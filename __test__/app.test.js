@@ -1,7 +1,7 @@
 import supertest from "supertest";
 import { app, server } from "../app.mjs";
 
-describe("Test the API's", () => {
+describe("Test the APIs", () => {
     afterAll(async () => {
         await server.close();
     });
@@ -10,6 +10,6 @@ describe("Test the API's", () => {
         const response = await supertest(app).get(
             "/api/location/search/?query=shanghai"
         );
-        expect(response.status).tobe(200);
+        expect(response.status).toBe(200);
     });
 });

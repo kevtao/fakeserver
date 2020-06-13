@@ -1,8 +1,8 @@
 import express from "express";
 
-const app = express();
+export const app = express();
 const port = process.env.PORT || 3000;
-const server = app.listen(port);
+export const server = app.listen(port);
 
 app.get("/api/location/search", (request, response) => {
   response.json([
