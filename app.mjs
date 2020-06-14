@@ -27,7 +27,7 @@ app.get("/api/location/:woied", (request, response) => {
         applicable_date: "2020-06-09",
         min_temp: 15.135,
         max_temp: 29.14,
-        the_temp: 28.424999999999997,
+        the_temp: -1.0,
         wind_speed: 4.166257675693948,
         wind_direction: 301.0129815794667,
         air_pressure: 1020.5,
