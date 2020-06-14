@@ -24,8 +24,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm test -- --coverage --watchAll=false
+    - name: Run CI steps
+      run: |
+        npm ci
+        npm test -- --coverage --watchAll=false
     - name: deploy to heroku
       if: github.ref == 'ref/heads/master'
       env:
