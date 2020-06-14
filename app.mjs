@@ -1,6 +1,9 @@
 import express from "express";
+import scout from "@scout_apm/scout-apm";
 
 export const app = express();
+app.use(scout.expressMiddleware());
+
 const port = process.env.PORT || 3000;
 export const server = app.listen(port);
 
