@@ -26,3 +26,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm test -- --coverage --watchAll=false
+    - name: deploy to heroku
+      if: github.ref == 'ref/heads/master'
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_TOKEN }}
+      run: |
+        docker build -t web .
+        heroku container:login
+        heroku container:push web -a bigwhale
+        heroku container:release web -a bigwhale
